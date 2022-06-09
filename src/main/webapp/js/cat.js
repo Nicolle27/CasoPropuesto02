@@ -12,16 +12,3 @@ function listarCategoria() {
 
     });
 }
-
-function guardarCategoria() {
-    let titulo = $("#descripcion").val();
-    $.cat("cat", {"descripcion": descripcion,"opc": 2}, function (data) {
-        bootbox.alert({
-            message: "Categoria guardada correctamente...!",
-            className: 'rubberBand animated'
-        });
-        limpiar();
-        listarCategoria();
-    });
-    $("#guardar").modal('hide');
-}
